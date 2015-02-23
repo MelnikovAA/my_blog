@@ -1,0 +1,28 @@
+
+{% block content %}
+
+			<div id="content">
+				<h2 id="article-title"><a href="#" id="{{article.id}}">{{article.title}}</a></h2>
+				<div id="article">
+					{{article.content}}		
+				</div>			
+				<div class="article_menu">
+					<a id= "likes" href="/likes/" >Понравилось: {{article.likes}}</a>
+					<b>Создана: {{article.created}}   </b>	
+				</div>				
+
+				<hr>
+				<h3 id="comments title">КОММЕНТАРИИ:</h3>				
+				{% for comment in comments %}
+				
+					<div class="comment">
+						<div class="article_menu">
+							<a id= "likes" href="/likes/" >Понравилсz: {{comment.likes}}</a>
+							<b>Создан: {{comment.created}}   </b>	
+						</div>					
+					</div>
+					{% endfor %}
+			</div>
+			
+	
+{% endblock %}

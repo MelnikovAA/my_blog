@@ -1,0 +1,12 @@
+<html>
+<head>
+    <title>Search</title>
+</head>
+<body>    
+        <div>
+        {{txtBx1}}
+        </div>
+        
+        <a href="" >Назад</a>    
+</body>
+</html>

@@ -1,0 +1,24 @@
+{% extends "main.html" %}
+
+
+{% block content %}
+ {% for article in articles %}	
+			<div id="content">
+				<h2 id="article-title"><a href="article/{{article.id}}" id="{{article.id}}">{{article.title}}</a></h2>
+				<div id="article-description">
+					{% if article.description %}
+						<p>{{article.description}}</p>
+					{% else %}
+						<p>article.content</p>
+					{% endif %}					
+				</div>
+				<div class="article_menu">
+					<b>Создана: {{article.created}}   </b>	
+					<div id="likes">Понравилось: {{article.likes}}</div>
+				</div>
+			</div>
+		{% empty %}
+			<h3>Нет постов</h3>	
+		{% endfor %}
+	
+{% endblock %}
